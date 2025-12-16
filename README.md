@@ -66,8 +66,9 @@ android_root_suite/
     ├── thread_utils.py
     └── logging_utils.py
 
-
 ```
+
+
 
  🚀 Quick Start
 Prerequisites
@@ -87,8 +88,9 @@ Clone the repository:
 git clone https://github.com/yourusername/android-root-suite.git
 cd android-root-suite
 
-
 ```
+
+
 
 Install dependencies:
 
@@ -96,8 +98,9 @@ Install dependencies:
 ```
 pip install -r requirements.txt
 
-
 ```
+
+
 
 Set up directories:
 
@@ -111,8 +114,9 @@ Run the application:
 ```
 python main.py
 
-
 ```
+
+
 
 First Run Setup
 Connect your Android device via USB
@@ -273,8 +277,8 @@ Updating the Tool
 git pull origin main
 pip install -r requirements.txt
 
-
 ```
+
 
 Adding New Features
 Follow the modular structure
@@ -299,6 +303,7 @@ Update documentation
 Submit a pull request
 
 Development Guidelines
+
 Follow PEP 8 style guide
 
 Add type hints for new functions
@@ -315,8 +320,9 @@ Running Tests
 ```
 python -m pytest tests/ -v
 
-
 ```
+
+
 
 Test Coverage
 Unit tests for core modules
