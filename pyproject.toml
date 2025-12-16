@@ -1,0 +1,105 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "android-root-suite"
+version = "4.0.0"
+description = "Complete Android rooting and device management toolkit with GUI"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Utilities",
+    "Topic :: System :: Recovery Tools",
+]
+keywords = ["android", "adb", "root", "recovery", "flashing", "backup"]
+dependencies = [
+    "Pillow>=10.0.0",
+    "psutil>=5.9.0",
+    "colorama>=0.4.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+gui = [
+    "customtkinter>=5.0.0",  # Optional modern GUI
+]
+build = [
+    "pyinstaller>=5.0.0",
+    "pywin32>=300; platform_system=='Windows'",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/android-root-suite"
+Documentation = "https://github.com/yourusername/android-root-suite/docs"
+Repository = "https://github.com/yourusername/android-root-suite.git"
+Issues = "https://github.com/yourusername/android-root-suite/issues"
+
+[project.scripts]
+android-root-suite = "main:main"
+ars = "main:main"  # Short alias
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--strict-markers",
+    "--strict-config",
+    "--tb=short",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gui: marks tests that require GUI",
+    "integration: marks integration tests",
+]
