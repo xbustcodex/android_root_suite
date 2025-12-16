@@ -80,8 +80,8 @@ USB Debugging enabled on Android device
 
 Installation
 Clone the repository:
-
 '''
+
 git clone https://github.com/yourusername/android-root-suite.git
 cd android-root-suite
 
