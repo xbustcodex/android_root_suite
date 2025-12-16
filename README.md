@@ -40,6 +40,7 @@ Warning System - Clear risk notifications
 
 Undo Protection - Backup management
 
+'''
 android_root_suite/
 ├── main.py                          # Entry point
 ├── config/                          # Configuration management
@@ -65,7 +66,7 @@ android_root_suite/
     ├── thread_utils.py
     └── logging_utils.py
 
-
+'''
 
  🚀 Quick Start
 Prerequisites
@@ -80,7 +81,7 @@ USB Debugging enabled on Android device
 Installation
 Clone the repository:
 
-bash'''
+'''
 git clone https://github.com/yourusername/android-root-suite.git
 cd android-root-suite
 
@@ -88,8 +89,9 @@ cd android-root-suite
 
 Install dependencies:
 
-bash'''
+'''
 pip install -r requirements.txt
+
 '''
 
 Set up directories:
@@ -100,7 +102,7 @@ You can modify the base directory in config/settings.py
 
 Run the application:
 
-bash'''
+'''
 python main.py
 
 '''
@@ -175,12 +177,14 @@ Logcat viewer
 Customizing Paths
 Edit config/settings.py to change:
 
+'''
 BASE_DIR = r"C:\Your\Custom\Path"
 SUBDIRS = {
     'backup_root': r"your_backups",
     'tools': r"your_tools",
     # ... other directories
 }
+'''
 
 Adding Custom Tools
 Place tool executables in appropriate brand directories
@@ -255,7 +259,7 @@ Logs are saved to logs/ directory with timestamps. Enable verbose logging in uti
 
 🔄 Updates & Maintenance
 Updating the Tool
-bash'''
+'''
 git pull origin main
 pip install -r requirements.txt
 
@@ -296,7 +300,7 @@ Update README.md for new features
 
 📊 Testing
 Running Tests
-bash'''
+'''
 python -m pytest tests/ -v
 
 '''
