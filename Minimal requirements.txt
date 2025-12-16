@@ -1,0 +1,7 @@
+# Minimal requirements for Android Root Suite
+# Tkinter is usually included with Python
+
+# Optional but recommended for better functionality
+Pillow>=10.0.0     # For screenshot handling
+psutil>=5.9.0      # For system monitoring
+colorama>=0.4.0    # For colored console output
