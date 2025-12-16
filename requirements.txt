@@ -1,0 +1,36 @@
+# ============================================
+# Android Root Suite - Requirements
+# ============================================
+
+# Core Python (should already be installed)
+# Python >= 3.8
+
+# GUI Framework
+tkinter  # Usually comes with Python
+
+# Optional: Enhanced GUI components
+# CustomTkinter==5.2.0  # For modern dark theme (optional)
+
+# Utility Libraries
+Pillow==10.0.0  # Image processing for screenshots
+psutil==5.9.6   # System utilities
+colorama==0.4.6 # Cross-platform colored terminal text
+
+# File Operations
+pywin32==306    # Windows-specific operations (only on Windows)
+# pyserial==3.5  # For serial communication (optional)
+
+# Logging and Debugging
+loguru==0.7.2   # Enhanced logging
+
+# Development Tools
+# black==23.9.1   # Code formatter (development only)
+# flake8==6.1.0   # Linter (development only)
+# pytest==7.4.3   # Testing framework (development only)
+
+# Type checking (development only)
+# mypy==1.5.1
+# types-psutil==5.9.5.14
+
+# Packaging
+# pyinstaller==5.13.0  # For creating executables
