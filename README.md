@@ -40,7 +40,7 @@ Warning System - Clear risk notifications
 
 Undo Protection - Backup management
 
-'''
+```
 android_root_suite/
 ├── main.py                          # Entry point
 ├── config/                          # Configuration management
